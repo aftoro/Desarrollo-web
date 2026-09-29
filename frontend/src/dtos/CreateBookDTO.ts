@@ -1,5 +1,3 @@
-import type { BookInterface } from '@/interfaces/BookInterface.js'; 
+import type { BookInterface } from '@/interfaces/BookInterface.js';
 
-export type CreateBookDTO = Omit<BookInterface, "id">; 
-
- 
+export type CreateBookDTO = Omit<BookInterface, 'id'>;
