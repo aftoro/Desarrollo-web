@@ -7,7 +7,7 @@ import { BooksModule } from './books/books.module.js';
   imports: [
     TypeOrmModule.forRoot({ 
       type: 'better-sqlite3', 
-      database: 'database.sqlite', 
+      database: process.env.SQLITE_PATH ?? 'database.sqlite',
       autoLoadEntities: true, 
       synchronize: true, 
     }), 
@@ -15,4 +15,4 @@ import { BooksModule } from './books/books.module.js';
     BooksModule,
   ], 
 }) 
-export class AppModule {} 
+export class AppModule {}
